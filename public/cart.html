@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    /* Cart Container */
+    #cart-items {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Cart Item */
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 20px;
+      border-radius: 4px;
+    }
+
+    .cart-item .product-details {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .product-details p {
+      margin: 5px;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* Cart Total */
+    #cart-total {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    /* Buttons */
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    a button {
+      background-color: #28a745;
+    }
+
+    a button:hover {
+      background-color: #218838;
+    }
+
+    /* Center buttons */
+    .cart-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    // Function to load cart from localStorage and display it
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartContainer = document.getElementById('cart-items');
+
+      if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Your cart is empty</p>';
+        return;
+      }
+
+      let total = 0;
+      cart.forEach(item => {
+        // Ensure the correct image path is used (with a fallback)
+        let imagePath;
+        switch (item.name) {
+          case 'Pistachio':
+            imagePath = './assets/graphics/Shop/product-2.png';
+            break;
+          case 'Fresh Banana':
+            imagePath = './assets/graphics/Shop/product-3.png';
+            break;
+          case 'Broccoli':
+            imagePath = './assets/graphics/Shop/product-1.png';
+            break;
+            case 'Red Tomato':
+            imagePath = './assets/graphics/Shop/product-4.png';
+            break;
+          case 'Mung Bean':
+            imagePath = './assets/graphics/Shop/product-5.png';
+            break;
+          case 'Brown Hazelnut':
+            imagePath = './assets/graphics/Shop/product-6.png';
+            break;
+            case 'Eggs':
+            imagePath = './assets/graphics/Shop/product-7.png';
+            break;
+          case 'Elaichi Rusk':
+            imagePath = './assets/graphics/Shop/product-8.png';
+            break;
+          default:
+            imagePath = './assets/graphics/Shop/product-1.png';  
+        }
+
+        total += item.price * item.quantity;
+        cartContainer.innerHTML += `
+          <div class="cart-item">
+            <img src="${imagePath}" alt="${item.name}">
+            <div class="product-details">
+              <p>${item.name}</p>
+              <p>Price: $${item.price}</p>
+              <p>Quantity: ${item.quantity}</p>
+              <p>Total: $${item.price * item.quantity}</p>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById('cart-total').textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    // Function to clear the cart
+    function clearCart() {
+      localStorage.removeItem('cart');
+      location.reload();
+    }
+  </script>
+</head>
+
+<body onload="loadCart()">
+
+  <h1>Your Cart</h1>
+
+  <div id="cart-items"></div>
+  <h3 id="cart-total">Total: $0.00</h3>
+
+  <div class="cart-buttons">
+    <button onclick="clearCart()">Clear Cart</button>
+    <a href="/checkout.html"><button>Checkout</button></a>
+  </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Login/Signup Page</title>
+    <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.hdwallpapers.in/download/countryside_paddy_fields_4k-HD.jpg');
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Ensures the image covers the screen */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+/* Add styles for the signup container */
+.signup-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background-color: rgb(212, 226, 231, 0.5);
+   
+}
+
+.signup-container h2 {
+    margin-top: 0;
+}
+
+/* Add styles for the card container */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+/* Add styles for the card layout */
+.card {
+    width: 70%;
+    margin: 20px;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(212, 226, 231, 0.3);
+}
+.p{
+   text-align : center;
+   font-size: 16px;
+}
+.card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.role-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.role-button:hover {
+    background-color: #3e8e41;
+}
+
+#doctor-button {
+    background-color:  #96c851;
+    color: #fff;
+}
+
+#patient-button {
+    background-color: #96c851;
+    color: #fff;
+}
+    </style>>
+</head>
+<body>
+    <div class="signup-container">
+        <center><h2>Sign up</h2></center>
+        <div class="card-container">
+            <div class="card">
+                <center><img src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-agriculture-clipart-farmer-boy-with-vegetables-and-fruits-cartoon-vector-png-image_6802287.png" alt="Doctor Logo"></center>
+                <a href="signup-user.html"><button class="role-button" id="doctor-button">User</button></a>
+            </div>
+            <div class="card">
+                <center><img src="https://png.pngtree.com/png-vector/20240124/ourmid/pngtree-gardener-planting-vegetables-illustration-in-doodle-style-png-image_11491369.png" alt="Patient Logo"></center>
+                <a href="signup-farmer.html"><button class="role-button" id="patient-button">Farmer</button></a>
+                
+        </div>
+    </div>
+    <p>Already have an account? <a href="login.html">login</a></p>
+</body>
+</html>
