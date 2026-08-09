@@ -2,6 +2,7 @@
 # ORGANICK - Organic Farming Platform
 
 **ORGANICK** is a web application for managing organic farming products. It includes features such as user and farmer registration, login, and product checkout. The platform allows both farmers and users to create accounts, log in, and access personalized services.
+
 <img width="1062" height="427" alt="image" src="https://github.com/user-attachments/assets/27aa8130-abcf-43f9-acf6-df0b105765c3" />
 
 
@@ -110,7 +111,7 @@ Farmers (collection)
     - location: String
 
 Users (collection)
-  - userUID (document)
+  - userUID (document) 
     - name: String
     - email: String
 **Usage**
@@ -158,9 +159,13 @@ ORGANICK/
 ---
 ## Routes
 POST /signup-farmer: Farmer registration.
+
 POST /login-farmer: Farmer login.
+
 POST /signup-user: User registration.
+
 POST /login-user: User login.
+
 
 ---
 
