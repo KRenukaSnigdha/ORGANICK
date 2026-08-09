@@ -134,26 +134,42 @@ Both farmers and users can log in by submitting their credentials via login-farm
 ORGANICK/
 │
 ├── assets/                  # Static assets like images, fonts, etc.
+
 │
 ├── node_modules/            # Dependencies (generated after npm install)
+
 │
 ├── partials/                # Reusable components like header and footer
+
 │
 ├── public/                  # Publicly accessible files
+
 │   └── styles.css           # Stylesheet for the application
+
 │
 ├── views/                   # HTML views
+
 │   ├── login-farmer.html    # Farmer login page
+
 │   ├── login-user.html      # User login page
+
 │   ├── signup-farmer.html   # Farmer signup page
+
 │   └── signup-user.html     # User signup page
+
 │
 ├── .gitignore               # Files and directories ignored by Git
+
 ├── Gulpfile.js              # Gulp task automation configuration
+
 ├── package.json             # Project metadata and dependencies
+
 ├── package-lock.json        # Dependency lock file
+
 ├── README.md                # Project documentation
+
 ├── server.js                # Express backend server
+
 └── serviceAccountKey.json   # Firebase Admin SDK credentials (DO NOT SHARE)
 
 ---
