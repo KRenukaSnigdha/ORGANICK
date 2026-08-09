@@ -36,13 +36,17 @@
 
 ---
 ## Screenshots
+
 1.Login and Sign Up pages 
+
 <img width="660" height="633" alt="image" src="https://github.com/user-attachments/assets/31fa8976-d160-4d89-a255-e869b368d465" />
 
 2.Products
+
 <img width="875" height="488" alt="image" src="https://github.com/user-attachments/assets/363bb457-f8a8-41b0-aa2e-767d4558fc6e" />
 
 3. Database
+   
 <img width="785" height="767" alt="image" src="https://github.com/user-attachments/assets/913cf2ce-8cef-4d06-b5f0-5ebeaf5d0584" />
 
 
@@ -125,25 +129,31 @@ Both farmers and users can log in by submitting their credentials via login-farm
 ---
 
 ## Project Structure
+
 ORGANICK/
 │
 ├── assets/                  # Static assets like images, fonts, etc.
+│
 ├── node_modules/            # Dependencies (generated after npm install)
-├── partials/                # Reusable components like header, footer
+│
+├── partials/                # Reusable components like header and footer
+│
 ├── public/                  # Publicly accessible files
-│   ├── styles.css           # Stylesheet for the app
-├── views/                   # HTML views (login, signup, etc.)
+│   └── styles.css           # Stylesheet for the application
+│
+├── views/                   # HTML views
 │   ├── login-farmer.html    # Farmer login page
 │   ├── login-user.html      # User login page
 │   ├── signup-farmer.html   # Farmer signup page
-│   ├── signup-user.html     # User signup page
-├── .gitignore               # Files and directories to ignore in Git
-├── Gulpfile.js              # Task automation using Gulp (if applicable)
+│   └── signup-user.html     # User signup page
+│
+├── .gitignore               # Files and directories ignored by Git
+├── Gulpfile.js              # Gulp task automation configuration
 ├── package.json             # Project metadata and dependencies
-├── package-lock.json        # Lock file for installed dependencies
+├── package-lock.json        # Dependency lock file
 ├── README.md                # Project documentation
-├── server.js                # Express server handling backend logic
-└── serviceAccountKey.json   # Firebase Admin SDK credentials (DO NOT share)
+├── server.js                # Express backend server
+└── serviceAccountKey.json   # Firebase Admin SDK credentials (DO NOT SHARE)
 
 ---
 ## Routes
